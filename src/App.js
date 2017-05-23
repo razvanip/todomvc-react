@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from 'react';
+import React, { Component } from 'react';
 import TodosContainer from './containers/todos-container';
 
 class App extends Component {

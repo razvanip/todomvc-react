@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TodoEditInput from './todo-edit-input';
-
-import cx from 'classnames';
 
 export default class Todo extends Component {
   renderTodoEdit() {
@@ -11,14 +9,9 @@ export default class Todo extends Component {
   }
 
   renderTodo() {
-    const todoClasses = {
-      todo: true,
-      todoEdit: this.props.isEditing,
-    };
-
     const {deleteTodo, completed, text, id, completeTodo}  = this.props;
 
-    return (<li className={cx(todoClasses)}>
+    return (<li>
       <input type="checkbox" checked={completed} onChange={()=> completeTodo(id)}/>
       <span>{text} : {completed.toString()}</span>
       <button onClick={()=> deleteTodo(id)}>close</button>
