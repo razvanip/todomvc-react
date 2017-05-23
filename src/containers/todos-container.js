@@ -83,7 +83,7 @@ export default class TodosContainer extends Component {
   }
 
   clearAllTodos() {
-    this.setState({todos: []})
+    this.setState({todos: []});
   }
 
   actions = {
@@ -103,6 +103,8 @@ export default class TodosContainer extends Component {
     })
   }
 
+
+
   render() {
     return (
       <div>
@@ -111,7 +113,7 @@ export default class TodosContainer extends Component {
           <TodoEditInput isNewTodo {...this.actions} text="I fetched some day"/>
         </Header>
         <TodoList todos={this.state.todos} actions={this.actions}/>
-        <Footer/>
+        <Footer clearAllTodos={ this.actions.clearAllTodos }/>
       </div>
     )
   }
