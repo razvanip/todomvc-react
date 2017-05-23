@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import PropTypes from 'prop-types';
 
 export default class TodoEditInput extends Component {
   constructor(props) {
@@ -13,9 +14,9 @@ export default class TodoEditInput extends Component {
   }
 
   static propTypes = {
-    text: React.PropTypes.string,
-    addTodo: React.PropTypes.func.isRequired
-  }
+    text: PropTypes.string,
+    addTodo: PropTypes.func.isRequired
+  };
 
   handleInputChange(e) {
     this.setState({

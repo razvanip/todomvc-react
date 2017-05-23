@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Header from '../components/header';
 import TodoEditInput from '../components/todo-edit-input';
@@ -17,6 +18,7 @@ export default class TodosContainer extends Component {
 
   static defaultProps = {
     title: 'Todos Title',
+    todos: []
   };
 
   static propTypes = {
